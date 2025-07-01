@@ -13,14 +13,14 @@ class WebText extends StatelessWidget {
 
   const WebText(
     this.text, {
-    Key? key,
+    super.key,
     this.fontSize,
     this.fontWeight,
     this.color,
     this.textAlign,
     this.maxLines,
     this.overflow,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

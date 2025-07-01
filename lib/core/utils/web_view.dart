@@ -49,7 +49,7 @@ class _WebViewState extends State<WebView> {
             WebViewWidget(controller: controller),
             if (isLoading)
               const Center(
-                child: CircularProgressIndicator(), // 👈 Show loader
+                child: CircularProgressIndicator(), 
               ),
           ],
         ),
