@@ -25,6 +25,7 @@ class _HomeViewState extends State<HomeView>
   late final Animation<Offset> _slideAnimation;
   late final Animation<double> _aboutFadeAnimation;
   late final Animation<Offset> _aboutSlideAnimation;
+  bool _initialized = false;
 
   @override
   void initState() {
