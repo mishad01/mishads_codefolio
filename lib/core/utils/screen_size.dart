@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ScreenSize {
-  static const double baseWidth = 1920;
-  static const double baseHeight = 3550;
+  static const double baseWidth = 1530;
+  static const double baseHeight = 730;
 
   static Size size(BuildContext context) => MediaQuery.of(context).size;
   static double width(BuildContext context) => size(context).width;
