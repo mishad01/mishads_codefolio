@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:mishads_codefolio/web.dart';
+import 'package:provider/provider.dart';
+
+import 'data/technologies_data.dart';
+import 'feature/home/view_model/stack_slide.dart';
 
 void main() {
-  runApp(const MyApp());
-}
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => StackSliderProvider(initialIndex: 0),
+        ),
+        ChangeNotifierProvider(create: (_) => TechnologiesData()),
+      ],
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const Web(),
-    );
-  }
+      child: const Web(),
+    ),
+  );
 }
