@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:mishads_codefolio/core/config/web_icons.dart';
+import 'package:mishads_codefolio/core/utils/web_navigator.dart';
+import 'package:mishads_codefolio/feature/experience/view/experience_view.dart';
+import 'package:mishads_codefolio/feature/home/view/home_view.dart';
+import 'package:mishads_codefolio/feature/home/view_model/bar_view_model.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/config/web_colors.dart';
 import '../../../../core/config/web_social_links.dart';
 import '../../../../core/utils/screen_size.dart';
-import '../../view_model/home_view_model.dart';
 import 'bar_icon_button.dart';
 import 'bar_text_button.dart';
 
@@ -19,7 +22,7 @@ class WebBar extends StatefulWidget {
 class _WebBarState extends State<WebBar> {
   @override
   Widget build(BuildContext context) {
-    final model = Provider.of<HomeViewModel>(context, listen: false);
+    final model = Provider.of<BarViewModel>(context);
 
     return Center(
       child: Container(
@@ -45,11 +48,54 @@ class _WebBarState extends State<WebBar> {
             alignment: WrapAlignment.center,
             crossAxisAlignment: WrapCrossAlignment.center,
             children: [
-              barTextButton("About", () {}, WebColors.white),
-              barTextButton("Education", () {}),
-              barTextButton("Experience", () {}),
-              barTextButton("Story", () {}),
-              barTextButton("Projects", () {}),
+              barTextButton(
+                "About",
+                () {
+                  model.setSelectedTab("About");
+                  WebNavigator.pushTo(context, const HomeView());
+                },
+                model.selectedTab == "About"
+                    ? WebColors.white
+                    : WebColors.primary,
+              ),
+              barTextButton(
+                "Education",
+                () {
+                  model.setSelectedTab("Education");
+                  // Implement navigation if needed
+                },
+                model.selectedTab == "Education"
+                    ? WebColors.white
+                    : WebColors.primary,
+              ),
+              barTextButton(
+                "Experience",
+                () {
+                  model.setSelectedTab("Experience");
+                  WebNavigator.pushTo(context, const ExperienceView());
+                },
+                model.selectedTab == "Experience"
+                    ? WebColors.white
+                    : WebColors.primary,
+              ),
+              barTextButton(
+                "Story",
+                () {
+                  model.setSelectedTab("Story");
+                },
+                model.selectedTab == "Story"
+                    ? WebColors.white
+                    : WebColors.primary,
+              ),
+              barTextButton(
+                "Projects",
+                () {
+                  model.setSelectedTab("Projects");
+                },
+                model.selectedTab == "Projects"
+                    ? WebColors.white
+                    : WebColors.primary,
+              ),
               barIconButton(WebIcons.github, () {
                 model.openUrl(WebSocialLinks.githubLink);
               }),
