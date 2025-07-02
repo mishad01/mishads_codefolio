@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mishads_codefolio/core/config/web_base_scaffold.dart';
 import 'package:mishads_codefolio/core/utils/screen_size.dart';
 import 'package:mishads_codefolio/feature/home/view/widget/about.dart';
+import 'package:mishads_codefolio/feature/home/view/widget/stack_slider.dart';
 import 'package:mishads_codefolio/feature/home/view/widget/web_bar.dart';
 import 'package:mishads_codefolio/feature/home/view_model/home_view_model.dart';
 import 'package:provider/provider.dart';
@@ -48,39 +49,48 @@ class _HomeViewState extends State<HomeView>
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    AnimatedBuilder(
-                      animation: model.controller,
-                      builder: (context, _) => AnimatedOpacity(
-                        opacity: model.fadeAnimation.value,
-                        duration: const Duration(milliseconds: 600),
-                        child: Transform.translate(
-                          offset: model.slideAnimation.value,
-                          child: Center(
-                            child: SizedBox(
-                              width: ScreenSize.scaleWidth(context, 622),
-                              child: WebBar(),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    AnimatedBuilder(
-                      animation: model.controller,
-                      builder: (context, child) => AnimatedOpacity(
-                        opacity: model.aboutFadeAnimation.value,
-                        duration: const Duration(milliseconds: 800),
-                        child: Transform.translate(
-                          offset: model.aboutSlideAnimation.value,
-                          child: const About(),
-                        ),
-                      ),
-                    ),
+                    animatedBar(model),
+                    animatedAbout(model),
+                    StackSlider(),
                   ],
                 ),
               ),
             ),
           );
         },
+      ),
+    );
+  }
+
+  Widget animatedAbout(HomeViewModel model) {
+    return AnimatedBuilder(
+      animation: model.controller,
+      builder: (context, child) => AnimatedOpacity(
+        opacity: model.aboutFadeAnimation.value,
+        duration: const Duration(milliseconds: 800),
+        child: Transform.translate(
+          offset: model.aboutSlideAnimation.value,
+          child: const About(),
+        ),
+      ),
+    );
+  }
+
+  Widget animatedBar(HomeViewModel model) {
+    return AnimatedBuilder(
+      animation: model.controller,
+      builder: (context, _) => AnimatedOpacity(
+        opacity: model.fadeAnimation.value,
+        duration: const Duration(milliseconds: 600),
+        child: Transform.translate(
+          offset: model.slideAnimation.value,
+          child: Center(
+            child: SizedBox(
+              width: ScreenSize.scaleWidth(context, 622),
+              child: WebBar(),
+            ),
+          ),
+        ),
       ),
     );
   }
