@@ -23,8 +23,10 @@ class ExperienceView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(height: 2.h),
+
             WebText(
-              "< Here, you can know me a little more and see my\nwhole experience as a Software Engineer. >",
+              "< Here, you can know me a little more and see my\nwhole experience as a Software Developer. >",
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 2.h),
