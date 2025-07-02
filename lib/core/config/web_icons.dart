@@ -1,5 +1,7 @@
 class WebIcons {
   static const String _base = 'assets';
+  static const String _icon = '$_base/icons';
+
   static const String _social = '$_base/icons/social';
 
   static const String cplus = '$_social/cplus.svg';
@@ -36,6 +38,11 @@ class WebIcons {
   static const String upwork = '$_social/upwork.svg';
   static const String vs = '$_social/vs.svg';
   static const String youtube = '$_social/youtube.svg';
+  static const String mb = "$_icon/mb.png";
+  static const String bd = "$_icon/bd.png";
+  static const String ml = "$_icon/ml.png";
+  static const String dl = "$_icon/dl.png";
+  static const String serviceBg = "$_icon/service_bg.png";
 
   // Optional legacy icons if needed:
   // static const String github = '$_social/github_icon.svg';

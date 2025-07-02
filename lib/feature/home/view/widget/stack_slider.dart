@@ -35,9 +35,10 @@ class StackSlider extends StatelessWidget {
     },
     {
       'name': 'Java',
-      'color': Color(0xFF007396), // Official Java Blue
+      'color': Color(0xFF005082), // Deeper, richer Java Blue
       'image': WebIcons.java,
     },
+
     {
       'name': 'Python',
       'color': Color(0xFF3776AB), // Official Python Blue
@@ -48,12 +49,12 @@ class StackSlider extends StatelessWidget {
       'color': Color(0xFFDD6C00), // Darker orange for Firebase (good contrast)
       'image': WebIcons.firebase,
     },
-    {
+
+    /*{
       'name': 'Git',
       'color': Color(0xFF9A2500), // Dark reddish-orange for Git
       'image': WebIcons.git,
-    },
-
+    },*/
     {
       'name': 'GitHub',
       'color': Color(0xFF636363), // Official GitHub Black
@@ -65,6 +66,8 @@ class StackSlider extends StatelessWidget {
       'image': WebIcons.sqlite,
     },
   ];
+
+  StackSlider({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +87,7 @@ class StackSlider extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 WebText(
-                  "4 years of",
+                  "3 years of",
                   color: WebColors.gray400,
                   fontSize: 16.sp,
                 ),
