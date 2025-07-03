@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mishads_codefolio/core/config/web_icons.dart';
 import 'package:mishads_codefolio/core/utils/web_navigator.dart';
+import 'package:mishads_codefolio/feature/education/view/education_view.dart';
 import 'package:mishads_codefolio/feature/experience/view/experience_view.dart';
 import 'package:mishads_codefolio/feature/home/view/home_view.dart';
 import 'package:mishads_codefolio/feature/home/view_model/bar_view_model.dart';
@@ -62,7 +63,7 @@ class _WebBarState extends State<WebBar> {
                 "Education",
                 () {
                   model.setSelectedTab("Education");
-                  // Implement navigation if needed
+                  WebNavigator.pushTo(context, const EducationView());
                 },
                 model.selectedTab == "Education"
                     ? WebColors.white

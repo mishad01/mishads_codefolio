@@ -13,4 +13,9 @@ class WebAssetPath {
   static const String learnathon = "$_images/learnathon.jpeg";
   static const String educlub = "$_images/club.jpeg";
   static const String mishad = "$_images/mishad.png";
+
+  //institution
+  static const String school = "$_images/school.png";
+  static const String college = "$_images/college.png";
+  static const String uni = "$_images/uni.png";
 }
