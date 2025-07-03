@@ -3,6 +3,8 @@ import 'package:mishads_codefolio/core/config/web_theme.dart';
 import 'package:mishads_codefolio/feature/home/view/home_view.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import 'core/utils/smooth_scroll_behavior.dart';
+
 class Web extends StatelessWidget {
   const Web({super.key});
 
@@ -13,6 +15,7 @@ class Web extends StatelessWidget {
         return MaterialApp(
           title: 'Flutter Demo',
           theme: WebTheme.lightTheme,
+          scrollBehavior: SmoothScrollBehavior(),
           darkTheme: WebTheme.darkTheme,
           home: HomeView(),
         );

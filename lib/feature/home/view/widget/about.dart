@@ -95,7 +95,7 @@ class _AboutState extends State<About> {
                                 children: [
                                   const TextSpan(text: "Over the past "),
                                   TextSpan(
-                                    text: "3+ years",
+                                    text: "2+ years",
                                     style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: WebColors.white,
