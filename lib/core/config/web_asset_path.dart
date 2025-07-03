@@ -17,7 +17,8 @@ class WebAssetPath {
   static const String coffee = "$_images/coffee.png";
   static const String task = "$_images/task.png";
   static const String kotlinTask = "$_images/kotlintask.jpg";
-
+  static const String kMovie = "$_images/k_movie.png";
+  static const String kTip = "$_images/k_tip.png";
   static const String ecommerce = "$_images/ecommerce.jpeg";
   static const String hr = "$_images/hr.png";
   static const String iot = "$_images/iot.jpg";
