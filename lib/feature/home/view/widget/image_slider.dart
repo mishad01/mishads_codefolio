@@ -17,7 +17,7 @@ class _ImageSliderState extends State<ImageSlider>
   final List<String> _images = [
     WebAssetPath.mishad,
     WebAssetPath.learnathon,
-    WebAssetPath.educlub,
+    WebAssetPath.eduClub,
   ];
 
   int _currentIndex = 0;

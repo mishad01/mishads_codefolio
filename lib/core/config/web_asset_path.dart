@@ -11,8 +11,20 @@ class WebAssetPath {
   //Images
   static const String _images = '$_base/images';
   static const String learnathon = "$_images/learnathon.jpeg";
-  static const String educlub = "$_images/club.jpeg";
+  static const String eduClub = "$_images/club.jpeg";
   static const String mishad = "$_images/mishad.png";
+  static const String eduBridge = "$_images/edu_bridge.png";
+  static const String coffee = "$_images/coffee.png";
+  static const String task = "$_images/task.png";
+  static const String kotlinTask = "$_images/kotlintask.jpg";
+
+  static const String ecommerce = "$_images/ecommerce.jpeg";
+  static const String hr = "$_images/hr.png";
+  static const String iot = "$_images/iot.jpg";
+  static const String meal = "$_images/meal.jpg";
+  static const String message = "$_images/message.png";
+  static const String social = "$_images/social.jpeg";
+  static const String quizz = "$_images/quizz.png";
 
   //institution
   static const String school = "$_images/school.png";

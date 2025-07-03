@@ -5,6 +5,7 @@ import 'package:mishads_codefolio/feature/education/view/education_view.dart';
 import 'package:mishads_codefolio/feature/experience/view/experience_view.dart';
 import 'package:mishads_codefolio/feature/home/view/home_view.dart';
 import 'package:mishads_codefolio/feature/home/view_model/bar_view_model.dart';
+import 'package:mishads_codefolio/feature/projects/view/project_view.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/config/web_colors.dart';
@@ -59,16 +60,7 @@ class _WebBarState extends State<WebBar> {
                     ? WebColors.white
                     : WebColors.primary,
               ),
-              barTextButton(
-                "Education",
-                () {
-                  model.setSelectedTab("Education");
-                  WebNavigator.pushTo(context, const EducationView());
-                },
-                model.selectedTab == "Education"
-                    ? WebColors.white
-                    : WebColors.primary,
-              ),
+
               barTextButton(
                 "Experience",
                 () {
@@ -76,6 +68,26 @@ class _WebBarState extends State<WebBar> {
                   WebNavigator.pushTo(context, const ExperienceView());
                 },
                 model.selectedTab == "Experience"
+                    ? WebColors.white
+                    : WebColors.primary,
+              ),
+              barTextButton(
+                "Projects",
+                () {
+                  model.setSelectedTab("Projects");
+                  WebNavigator.pushTo(context, const ProjectView());
+                },
+                model.selectedTab == "Projects"
+                    ? WebColors.white
+                    : WebColors.primary,
+              ),
+              barTextButton(
+                "Education",
+                () {
+                  model.setSelectedTab("Education");
+                  WebNavigator.pushTo(context, const EducationView());
+                },
+                model.selectedTab == "Education"
                     ? WebColors.white
                     : WebColors.primary,
               ),
@@ -88,15 +100,7 @@ class _WebBarState extends State<WebBar> {
                     ? WebColors.white
                     : WebColors.primary,
               ),
-              barTextButton(
-                "Projects",
-                () {
-                  model.setSelectedTab("Projects");
-                },
-                model.selectedTab == "Projects"
-                    ? WebColors.white
-                    : WebColors.primary,
-              ),
+
               barIconButton(WebIcons.github, () {
                 model.openUrl(WebSocialLinks.githubLink);
               }),
