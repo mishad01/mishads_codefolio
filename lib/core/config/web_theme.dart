@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mishads_codefolio/core/config/web_colors.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class WebTheme {
   static final ThemeData lightTheme = ThemeData(
@@ -32,7 +33,8 @@ class WebTheme {
       style: ElevatedButton.styleFrom(
         backgroundColor: WebColors.appThemeColor,
         foregroundColor: WebColors.appWhiteColor,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        minimumSize: Size(12.w, 8.h),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2.w)),
       ),
     ),
     textButtonTheme: TextButtonThemeData(
@@ -62,7 +64,8 @@ class WebTheme {
       style: ElevatedButton.styleFrom(
         backgroundColor: WebColors.appThemeColor,
         foregroundColor: WebColors.appWhiteColor,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        minimumSize: Size(12.w, 8.h),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(2.w)),
       ),
     ),
   );

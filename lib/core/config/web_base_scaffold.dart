@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mishads_codefolio/core/config/web_colors.dart';
 import 'package:mishads_codefolio/core/utils/smooth_scroll_behavior.dart';
+import 'package:mishads_codefolio/feature/home/view/widget/web_bar.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class WebBaseScaffold extends StatefulWidget {
-  final TextEditingController? addTaskController;
   final Widget widget;
-  final PreferredSizeWidget? appBar;
 
-  const WebBaseScaffold({
-    super.key,
-    this.appBar,
-    this.addTaskController,
-    required this.widget,
-  });
+  const WebBaseScaffold({super.key, required this.widget});
 
   @override
   State<WebBaseScaffold> createState() => _WebBaseScaffoldState();
@@ -26,7 +20,6 @@ class _WebBaseScaffoldState extends State<WebBaseScaffold> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: WebColors.gray900,
-      appBar: widget.appBar,
       body: ScrollConfiguration(
         behavior: SmoothScrollBehavior(),
         child: SingleChildScrollView(
@@ -36,9 +29,14 @@ class _WebBaseScaffoldState extends State<WebBaseScaffold> {
             padding: EdgeInsets.only(
               left: Adaptive.w(8),
               right: Adaptive.w(8),
-              top: 16,
+              top: 2.h,
             ),
-            child: widget.widget,
+            child: Column(
+              children: [
+                WebBar(),
+                widget.widget, // your main content
+              ],
+            ),
           ),
         ),
       ),

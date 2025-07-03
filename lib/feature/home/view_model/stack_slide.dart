@@ -8,8 +8,8 @@ class StackSliderProvider extends ChangeNotifier {
 
   int get currentIndex => _currentIndex;
 
-  void updateIndex(int index) {
-    _currentIndex = index;
+  void updateIndex(int index, int itemCount) {
+    _currentIndex = index % itemCount;
     notifyListeners();
   }
 }

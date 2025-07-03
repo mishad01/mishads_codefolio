@@ -23,7 +23,7 @@ class _AboutState extends State<About> {
     final model = Provider.of<HomeViewModel>(context, listen: false);
     return SingleChildScrollView(
       child: ConstrainedBox(
-        constraints: BoxConstraints(minHeight: 80.h),
+        constraints: BoxConstraints(minHeight: 75.h),
         child: IntrinsicHeight(
           child: Row(
             children: [

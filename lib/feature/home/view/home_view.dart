@@ -52,7 +52,6 @@ class _HomeViewState extends State<HomeView>
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    animatedBar(model),
                     animatedAbout(model),
                     stackSlider(model),
                     SizedBox(height: 10.h),

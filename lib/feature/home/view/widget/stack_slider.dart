@@ -116,9 +116,10 @@ class StackSlider extends StatelessWidget {
                 autoPlay: true,
                 enlargeCenterPage: true,
                 padEnds: false,
+                autoPlayInterval: Duration(seconds: 2),
                 initialPage: provider.currentIndex,
                 onPageChanged: (index, reason) {
-                  provider.updateIndex(index);
+                  provider.updateIndex(index, stackItems.length - 1);
                 },
               ),
               items: stackItems.map((item) {

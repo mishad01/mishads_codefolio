@@ -52,7 +52,7 @@ class _AboutTechnologiesState extends State<AboutTechnologies> {
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Wrap(
-            spacing: 16,
+            spacing: 5.w,
             runSpacing: 16,
             children: technologies.map((category) {
               return Material(
