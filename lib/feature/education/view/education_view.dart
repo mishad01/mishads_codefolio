@@ -71,6 +71,27 @@ class _EducationViewState extends State<EducationView> {
                 viewportFraction: 0.33,
               ),
             ),
+            SizedBox(height: 2.h),
+            WebText(
+              "My Publication",
+              fontSize: 22.sp,
+              fontWeight: FontWeight.w600,
+            ),
+            WebText(
+              "What I Research",
+              color: WebColors.gray400,
+              fontSize: 16.sp,
+            ),
+            SizedBox(
+              height: 60.h,
+              width: 50.w,
+              child: const Center(
+                child: WebText(
+                  "🚧 Ideas Loading... Please wait ⏳",
+                  fontSize: 18,
+                ),
+              ),
+            ),
           ],
         ),
       ),
