@@ -25,7 +25,7 @@ class ProjectCard extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              /// Left side: Title, duration, org, description
+              // Left side
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,6 +57,7 @@ class ProjectCard extends StatelessWidget {
 
               SizedBox(width: 3.w),
 
+              // Right side
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,12 +102,29 @@ class ProjectCard extends StatelessWidget {
                   ],
                 ),
               ),
+
               if (project.imageUrl != null && project.imageUrl!.isNotEmpty)
                 Expanded(
                   child: SizedBox(
                     height: 200,
                     width: 500,
-                    child: Image.asset(project.imageUrl!, fit: BoxFit.contain),
+                    child: Image.network(
+                      project.imageUrl!,
+                      fit: BoxFit.contain,
+                      loadingBuilder: (context, child, loadingProgress) {
+                        if (loadingProgress == null) return child;
+                        return Center(
+                          child: CircularProgressIndicator(
+                            value: loadingProgress.expectedTotalBytes != null
+                                ? loadingProgress.cumulativeBytesLoaded /
+                                      (loadingProgress.expectedTotalBytes!)
+                                : null,
+                          ),
+                        );
+                      },
+                      errorBuilder: (context, error, stackTrace) =>
+                          const Icon(Icons.broken_image, size: 60),
+                    ),
                   ),
                 ),
             ],

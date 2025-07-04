@@ -31,7 +31,7 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
     },
     {
       "img": WebIcons.ml,
-      "title": "Machine Learning & Deep Learning",
+      "title": "Machine & Deep Learning",
       "languages":
           "Python, NumPy, Pandas, TensorFlow, Keras, CNN, ANN, OpenCV, Scikit-learn",
       "details":
@@ -86,7 +86,7 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
               ),
               padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.5.h),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Center(
                     child: SizedBox(
@@ -97,8 +97,7 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
                           Stack(
                             alignment: Alignment.center,
                             children: [
-                              if (item["title"] ==
-                                  "Machine Learning & Deep Learning")
+                              if (item["title"] == "Machine & Deep Learning")
                                 Row(
                                   mainAxisSize: MainAxisSize.min,
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -119,31 +118,26 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
                     ),
                   ),
                   SizedBox(height: 1.h),
-                  Text(
+                  WebText(
                     item["title"]!,
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
+                    textAlign: TextAlign.center,
                   ),
-                  SizedBox(height: 1.h),
-                  Text(
+                  WebText(
                     "Details",
-                    style: TextStyle(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green,
-                    ),
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
                   ),
                   Expanded(
-                    child: Text(
+                    child: WebText(
                       item["details"]!,
-                      style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w300,
-                        color: Colors.white,
-                      ),
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w300,
+                      color: Colors.white,
+
                       overflow: TextOverflow.ellipsis,
                       maxLines: 5,
                     ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mishads_codefolio/data/project_data.dart';
 import 'package:mishads_codefolio/feature/home/view_model/bar_view_model.dart';
 import 'package:mishads_codefolio/feature/home/view_model/home_view_model.dart';
 import 'package:mishads_codefolio/web.dart';
@@ -22,6 +23,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => HomeViewModel()),
         ChangeNotifierProvider(create: (_) => BarViewModel()),
         ChangeNotifierProvider(create: (_) => ProjectBarViewModel()),
+        ChangeNotifierProvider(create: (_) => ProjectData()),
       ],
 
       child: const Web(),
