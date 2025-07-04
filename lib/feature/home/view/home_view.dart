@@ -56,7 +56,6 @@ class _HomeViewState extends State<HomeView>
                     stackSlider(model),
                     SizedBox(height: 10.h),
                     MyExpertiseView(),
-                    SizedBox(height: 10.h),
                     AboutTechnologies(),
                   ],
                 ),
