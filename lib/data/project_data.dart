@@ -203,6 +203,59 @@ final List<ProjectModel> projectData = [
     imageUrl: WebAssetPath.kotlinTask,
   ),
   ProjectModel(
+    title: "Basic Movie App with Jetpack Compose & Navigation",
+    description:
+        "A modern movie listing app developed using Jetpack Compose and Navigation components. Displays dynamic content, poster previews, expandable cards, and a detail screen with image support.",
+    duration: "June 2025",
+    organization: "Self Project",
+    features: [
+      "LazyColumn Movie List with Clickable Rows",
+      "Navigation Between Screens with Arguments",
+      "Expandable Movie Info Cards",
+      "Top App Bar with Back Navigation",
+      "Image Loading with Coil",
+    ],
+    techStack: ["Kotlin", "Jetpack Compose", "Navigation Component", "Coil"],
+    skills: [
+      "Composable Design",
+      "Android Navigation",
+      "State Management",
+      "Dynamic UI",
+    ],
+    categories: [
+      "Android",
+      "Kotlin",
+      "Jetpack Compose",
+      "UI Design",
+      "Navigation",
+    ],
+    imageUrl: WebAssetPath.kMovie,
+  ),
+  ProjectModel(
+    title: "Basic Jetpack Compose Tip Calculator App",
+    description:
+        "An interactive tip calculator built using Jetpack Compose that allows users to calculate tips, split bills, and adjust percentages with a smooth UI and state management.",
+    duration: "June 2025",
+    organization: "Self Project",
+    features: [
+      "Custom Input Fields with State Hoisting",
+      "Tip Percentage Slider & Calculations",
+      "Per-Person Cost Computation",
+      "Reusable Composables and Round Icon Buttons",
+    ],
+    techStack: ["Kotlin", "Jetpack Compose"],
+    skills: ["State Hoisting", "UI Composables", "Kotlin", "Declarative UI"],
+    categories: [
+      "Android",
+      "Jetpack Compose",
+      "Kotlin",
+      "UI",
+      "State Management",
+    ],
+    imageUrl: WebAssetPath.kTip,
+  ),
+
+  ProjectModel(
     title: "Bangla Currency Detection using CNN",
     description:
         "A deep learning project for detecting and classifying Bangladeshi currency notes using Convolutional Neural Networks (CNN). Trained on a custom dataset with TensorFlow/Keras.",
