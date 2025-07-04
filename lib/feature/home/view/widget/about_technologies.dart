@@ -53,7 +53,7 @@ class _AboutTechnologiesState extends State<AboutTechnologies> {
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Wrap(
-            spacing: 5.w,
+            spacing: 6.w,
             runSpacing: 16,
             children: technologies.map((category) {
               return Material(
@@ -96,6 +96,7 @@ class _AboutTechnologiesState extends State<AboutTechnologies> {
                                   skill.iconPath,
                                   height: 4.h,
                                   width: 4.w,
+                                  fit: BoxFit.contain,
                                 ),
                                 SizedBox(width: 2.w),
                                 Expanded(

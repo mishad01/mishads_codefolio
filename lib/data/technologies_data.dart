@@ -6,13 +6,6 @@ import '../core/config/web_icons.dart';
 class TechnologiesData extends ChangeNotifier {
   final List<SkillCategory> _codingSkills = [
     SkillCategory(
-      title: 'Publication in Both Stores',
-      items: [
-        SkillItemModel(name: 'App Store', iconPath: WebIcons.ios),
-        SkillItemModel(name: 'Play Store', iconPath: WebIcons.googlePlay),
-      ],
-    ),
-    SkillCategory(
       title: 'Programming Languages',
       items: [
         SkillItemModel(name: 'C++', iconPath: WebIcons.cplus),
@@ -74,6 +67,13 @@ class TechnologiesData extends ChangeNotifier {
         SkillItemModel(name: 'Riverpod', iconPath: WebIcons.flutter),
         SkillItemModel(name: 'BLoC', iconPath: WebIcons.flutter),
         SkillItemModel(name: 'GetX', iconPath: WebIcons.flutter),
+      ],
+    ),
+    SkillCategory(
+      title: 'Publication in ',
+      items: [
+        //SkillItemModel(name: 'App Store', iconPath: WebIcons.ios),
+        SkillItemModel(name: 'Play Store', iconPath: WebIcons.googlePlay),
       ],
     ),
   ];

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mishads_codefolio/core/config/web_icons.dart';
 import 'package:mishads_codefolio/core/utils/web_custom_text.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -35,7 +36,7 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
       "languages":
           "Python, NumPy, Pandas, TensorFlow, Keras, CNN, ANN, OpenCV, Scikit-learn",
       "details":
-          "Experienced in machine learning and deep learning with hands-on projects involving artificial neural networks (ANN) and convolutional neural networks (CNN). Proficient in data preprocessing and manipulation using NumPy and Pandas. Skilled in developing and training models using TensorFlow and Keras. Knowledgeable in computer vision techniques using OpenCV and image classification tasks. Familiar with Scikit-learn for traditional ML algorithms and evaluation.",
+          "Experienced in machine learning and deep learning with hands-on projects involving artificial neural networks (ANN), convolutional neural networks (CNN) and Recurrent Neural Network (RNN). Proficient in data preprocessing and manipulation using NumPy and Pandas. Skilled in developing and training models using TensorFlow and Keras. Knowledgeable in computer vision techniques using OpenCV and image classification tasks. Familiar with Scikit-learn for traditional ML algorithms and evaluation.",
     },
   ];
 
@@ -48,7 +49,7 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
           textAlign: TextAlign.center,
           text: TextSpan(
             text: "MY ",
-            style: TextStyle(
+            style: GoogleFonts.raleway(
               fontWeight: FontWeight.w400,
               fontSize: 4.2.w,
               color: Colors.white,
@@ -56,7 +57,7 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
             children: [
               TextSpan(
                 text: "EXPERTISE",
-                style: TextStyle(
+                style: GoogleFonts.raleway(
                   fontWeight: FontWeight.w400,
                   fontSize: 4.2.w,
                   color: WebColors.primary,
@@ -66,7 +67,7 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
           ),
         ),
         WebText(
-          "What can I do",
+          "What I can do",
           fontSize: 14.sp,
           fontWeight: FontWeight.w300,
           color: Colors.white,
@@ -78,11 +79,11 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
           alignment: WrapAlignment.center,
           children: expertise.map((item) {
             return Container(
-              height: 55.h,
+              height: 50.h,
               width: 30.w,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
-                color: Colors.black.withOpacity(0.7),
+                color: WebColors.gray700,
               ),
               padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 1.5.h),
               child: Column(
@@ -137,9 +138,9 @@ class _MyExpertiseViewState extends State<MyExpertiseView> {
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w300,
                       color: Colors.white,
-
                       overflow: TextOverflow.ellipsis,
-                      maxLines: 5,
+                      textAlign: TextAlign.center,
+                      maxLines: 7,
                     ),
                   ),
                 ],

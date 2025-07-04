@@ -21,7 +21,7 @@ class _StoryViewState extends State<StoryView> {
             height: ScreenSize.scaleHeight(context, 600),
 
             child: Center(
-              child: WebText("Will be adding soon", color: Colors.white),
+              child: WebText("Will be adding soon...", color: Colors.white),
             ),
           ),
         ],

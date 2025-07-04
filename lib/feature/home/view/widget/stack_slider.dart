@@ -12,61 +12,20 @@ import '../../view_model/stack_slide.dart';
 
 class StackSlider extends StatelessWidget {
   final List<Map<String, dynamic>> stackItems = [
-    {
-      'name': 'Flutter',
-      'color': Color(0xFF02569B), // Official Flutter Blue
-      'image': WebIcons.flutter,
-    },
-    {
-      'name': 'Kotlin',
-      'color': Color(0xFF7F52FF), // Official Kotlin Purple
-      'image': WebIcons.kotlin,
-    },
-
-    {
-      'name': 'Dart',
-      'color': Color(0xFF0175C2), // Official Dart Blue
-      'image': WebIcons.dart,
-    },
-    {
-      'name': 'C++',
-      'color': Color(0xFF00599C), // Commonly accepted C++ Blue
-      'image': WebIcons.cplus,
-    },
-    {
-      'name': 'Java',
-      'color': Color(0xFF005082), // Deeper, richer Java Blue
-      'image': WebIcons.java,
-    },
-
-    {
-      'name': 'Python',
-      'color': Color(0xFF3776AB), // Official Python Blue
-      'image': WebIcons.python,
-    },
+    {'name': 'Flutter', 'color': Color(0xFF02569B), 'image': WebIcons.flutter},
+    {'name': 'Kotlin', 'color': Color(0xFF7F52FF), 'image': WebIcons.kotlin},
+    {'name': 'Dart', 'color': Color(0xFF0175C2), 'image': WebIcons.dart},
+    {'name': 'C++', 'color': Color(0xFF00599C), 'image': WebIcons.cplus},
+    {'name': 'Java', 'color': Color(0xFF005082), 'image': WebIcons.java},
+    {'name': 'Python', 'color': Color(0xFF3776AB), 'image': WebIcons.python},
     {
       'name': 'Firebase',
-      'color': Color(0xFFDD6C00), // Darker orange for Firebase (good contrast)
+      'color': Color(0xFFDD6C00),
       'image': WebIcons.firebase,
     },
-
-    /*{
-      'name': 'Git',
-      'color': Color(0xFF9A2500), // Dark reddish-orange for Git
-      'image': WebIcons.git,
-    },*/
-    {
-      'name': 'GitHub',
-      'color': Color(0xFF636363), // Official GitHub Black
-      'image': WebIcons.github,
-    },
-    {
-      'name': 'SQLite',
-      'color': Color(0xFF003B57), // Official SQLite Blue
-      'image': WebIcons.sqlite,
-    },
+    {'name': 'GitHub', 'color': Color(0xFF636363), 'image': WebIcons.github},
+    {'name': 'SQLite', 'color': Color(0xFF003B57), 'image': WebIcons.sqlite},
   ];
-
   StackSlider({super.key});
 
   @override
@@ -87,7 +46,7 @@ class StackSlider extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 WebText(
-                  "3 years of",
+                  "2 years of",
                   color: WebColors.gray400,
                   fontSize: 16.sp,
                 ),
@@ -151,10 +110,11 @@ class StackSlider extends StatelessWidget {
                                       item['image'],
                                       placeholderBuilder: (context) =>
                                           const CircularProgressIndicator(),
-                                      width: 50, // Try hardcoding size
-                                      height: 50,
+                                      width: 6.w,
+                                      height: 6.h,
                                       fit: BoxFit.contain,
                                     ),
+                                    SizedBox(height: 1.h),
                                     WebText(
                                       item['name'],
                                       color: Colors.white,
