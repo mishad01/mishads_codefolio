@@ -141,38 +141,27 @@ class StackSlider extends StatelessWidget {
                           children: [
                             Align(
                               alignment: Alignment.centerLeft,
-                              child: Container(
-                                /*height: ScreenSize.scaleHeight(context, 100),
-                                width: ScreenSize.scaleWidth(context, 100),*/
-                                /*decoration: BoxDecoration(
-                                  color: Colors.black.withOpacity(0.6),
-                                  borderRadius: BorderRadius.circular(
-                                    ScreenSize.scaleWidth(context, 8),
-                                  ),
-                                ),*/
-                                child: Padding(
-                                  padding: EdgeInsets.only(left: 3.w),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      SvgPicture.asset(
-                                        item['image'],
-                                        placeholderBuilder: (context) =>
-                                            const CircularProgressIndicator(),
-                                        width: 40, // Try hardcoding size
-                                        height: 40,
-                                        fit: BoxFit.contain,
-                                      ),
-                                      WebText(
-                                        item['name'],
-                                        color: Colors.white,
-                                        fontSize: 13.sp,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                    ],
-                                  ),
+                              child: Padding(
+                                padding: EdgeInsets.only(left: 3.w),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SvgPicture.asset(
+                                      item['image'],
+                                      placeholderBuilder: (context) =>
+                                          const CircularProgressIndicator(),
+                                      width: 50, // Try hardcoding size
+                                      height: 50,
+                                      fit: BoxFit.contain,
+                                    ),
+                                    WebText(
+                                      item['name'],
+                                      color: Colors.white,
+                                      fontSize: 13.sp,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ],
                                 ),
                               ),
                             ),

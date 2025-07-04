@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mishads_codefolio/core/config/web_colors.dart';
 import 'package:mishads_codefolio/feature/home/model/skill_item_model.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -82,7 +83,15 @@ class _AboutTechnologiesState extends State<AboutTechnologies> {
                           return Padding(
                             padding: const EdgeInsets.symmetric(vertical: 4.0),
                             child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
+                                Icon(
+                                  Icons.fiber_manual_record,
+                                  size: 8.sp,
+                                  color: WebColors.gray400,
+                                ),
+                                SizedBox(width: 2.w),
+
                                 SvgPicture.asset(
                                   skill.iconPath,
                                   height: 4.h,

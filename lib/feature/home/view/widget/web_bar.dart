@@ -6,6 +6,7 @@ import 'package:mishads_codefolio/feature/experience/view/experience_view.dart';
 import 'package:mishads_codefolio/feature/home/view/home_view.dart';
 import 'package:mishads_codefolio/feature/home/view_model/bar_view_model.dart';
 import 'package:mishads_codefolio/feature/projects/view/project_view.dart';
+import 'package:mishads_codefolio/feature/story/view/story_view.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/config/web_colors.dart';
@@ -95,6 +96,7 @@ class _WebBarState extends State<WebBar> {
                 "Story",
                 () {
                   model.setSelectedTab("Story");
+                  WebNavigator.pushTo(context, const StoryView());
                 },
                 model.selectedTab == "Story"
                     ? WebColors.white

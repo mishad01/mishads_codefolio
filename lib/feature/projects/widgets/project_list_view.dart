@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart'; // Make sure this is imported
 
 import '../../../data/project_data.dart';
 import '../model/project_model.dart';
@@ -12,6 +13,9 @@ class ProjectsListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<ProjectData>(context);
+    final List<ProjectModel> projectData = provider.projectData;
+
     final List<ProjectModel> filteredProjects;
 
     switch (type) {
