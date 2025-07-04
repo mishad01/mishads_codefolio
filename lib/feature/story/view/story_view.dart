@@ -18,7 +18,8 @@ class _StoryViewState extends State<StoryView> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            height: ScreenSize.scaleHeight(context, 500),
+            height: ScreenSize.scaleHeight(context, 600),
+
             child: Center(
               child: WebText("Will be adding soon", color: Colors.white),
             ),

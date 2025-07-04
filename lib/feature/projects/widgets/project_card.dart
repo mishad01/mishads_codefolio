@@ -108,20 +108,9 @@ class ProjectCard extends StatelessWidget {
                   child: SizedBox(
                     height: 200,
                     width: 500,
-                    child: Image.network(
+                    child: Image.asset(
                       project.imageUrl!,
                       fit: BoxFit.contain,
-                      loadingBuilder: (context, child, loadingProgress) {
-                        if (loadingProgress == null) return child;
-                        return Center(
-                          child: CircularProgressIndicator(
-                            value: loadingProgress.expectedTotalBytes != null
-                                ? loadingProgress.cumulativeBytesLoaded /
-                                      (loadingProgress.expectedTotalBytes!)
-                                : null,
-                          ),
-                        );
-                      },
                       errorBuilder: (context, error, stackTrace) =>
                           const Icon(Icons.broken_image, size: 60),
                     ),
