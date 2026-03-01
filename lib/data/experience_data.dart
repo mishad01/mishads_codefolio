@@ -5,6 +5,20 @@ import '../feature/experience/model/experience_model.dart';
 class ExperienceData with ChangeNotifier {
   final List<ExperienceModel> _experienceData = [
     ExperienceModel(
+      compnayName: 'Brain Station 23',
+      position: 'Software Engineer - I',
+      type: 'Full-time',
+      time: 'Jul 2025 - Present',
+      description:
+          '• Developing and maintaining enterprise-level applications for both Android and iOS platforms.\n'
+          '• Delivering robust and scalable solutions following clean architecture principles.\n'
+          '• Collaborating with cross-functional teams to publish and manage apps on the Google Play Store and Apple App Store.\n'
+          '• Participating in code reviews and mentoring team members on best practices.',
+      skills:
+          'Flutter / Dart / Clean Architecture / App Store Deployment / Play Store Deployment / Git / Team Collaboration',
+      location: 'Dhaka, Bangladesh',
+    ),
+    ExperienceModel(
       compnayName: 'Geeky Solutions',
       position: 'Apprenticeship',
       type: 'Learnathon 3.0 (Sponsored by BrainStation23)',
