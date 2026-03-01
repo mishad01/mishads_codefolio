@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mishads_codefolio/core/config/web_icons.dart';
-import 'package:mishads_codefolio/core/utils/web_navigator.dart';
-import 'package:mishads_codefolio/feature/education/view/education_view.dart';
-import 'package:mishads_codefolio/feature/experience/view/experience_view.dart';
-import 'package:mishads_codefolio/feature/home/view/home_view.dart';
+import 'package:go_router/go_router.dart';
 import 'package:mishads_codefolio/feature/home/view_model/bar_view_model.dart';
-import 'package:mishads_codefolio/feature/projects/view/project_view.dart';
-import 'package:mishads_codefolio/feature/story/view/story_view.dart';
 import 'package:provider/provider.dart';
 
 import '../../../../core/config/web_colors.dart';
@@ -55,7 +50,7 @@ class _WebBarState extends State<WebBar> {
                 "About",
                 () {
                   model.setSelectedTab("About");
-                  WebNavigator.pushTo(context, const HomeView());
+                  context.go('/');
                 },
                 model.selectedTab == "About"
                     ? WebColors.white
@@ -66,7 +61,7 @@ class _WebBarState extends State<WebBar> {
                 "Experience",
                 () {
                   model.setSelectedTab("Experience");
-                  WebNavigator.pushTo(context, const ExperienceView());
+                  context.go('/experience');
                 },
                 model.selectedTab == "Experience"
                     ? WebColors.white
@@ -76,7 +71,7 @@ class _WebBarState extends State<WebBar> {
                 "Projects",
                 () {
                   model.setSelectedTab("Projects");
-                  WebNavigator.pushTo(context, const ProjectView());
+                  context.go('/projects');
                 },
                 model.selectedTab == "Projects"
                     ? WebColors.white
@@ -86,7 +81,7 @@ class _WebBarState extends State<WebBar> {
                 "Education",
                 () {
                   model.setSelectedTab("Education");
-                  WebNavigator.pushTo(context, const EducationView());
+                  context.go('/education');
                 },
                 model.selectedTab == "Education"
                     ? WebColors.white
@@ -96,7 +91,7 @@ class _WebBarState extends State<WebBar> {
                 "Story",
                 () {
                   model.setSelectedTab("Story");
-                  WebNavigator.pushTo(context, const StoryView());
+                  context.go('/story');
                 },
                 model.selectedTab == "Story"
                     ? WebColors.white

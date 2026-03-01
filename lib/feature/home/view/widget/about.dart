@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mishads_codefolio/core/utils/web_navigator.dart';
-import 'package:mishads_codefolio/feature/experience/view/experience_view.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -149,10 +148,7 @@ class _AboutState extends State<About> {
                                 SizedBox(width: 1.w),
                                 ElevatedButton(
                                   onPressed: () {
-                                    WebNavigator.pushTo(
-                                      context,
-                                      ExperienceView(),
-                                    );
+                                    context.go('/experience');
                                   },
                                   style: ElevatedButton.styleFrom(
                                     minimumSize: Size(12.w, 8.h),

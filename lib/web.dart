@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:mishads_codefolio/core/config/web_theme.dart';
+import 'package:mishads_codefolio/core/routes/app_router.dart';
 import 'package:mishads_codefolio/core/utils/smooth_scroll_behavior.dart';
-import 'package:mishads_codefolio/feature/home/view/home_view.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class Web extends StatelessWidget {
@@ -15,12 +15,12 @@ class Web extends StatelessWidget {
         if (kIsWeb ||
             screenType == ScreenType.tablet ||
             screenType == ScreenType.desktop) {
-          return MaterialApp(
+          return MaterialApp.router(
             title: 'Flutter Web App',
             theme: WebTheme.lightTheme,
             darkTheme: WebTheme.darkTheme,
             scrollBehavior: SmoothScrollBehavior(),
-            home: const HomeView(),
+            routerConfig: AppRouter.router,
           );
         } else {
           return const MaterialApp(
