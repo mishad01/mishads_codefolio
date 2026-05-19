@@ -5,59 +5,60 @@ import '../feature/experience/model/experience_model.dart';
 class ExperienceData with ChangeNotifier {
   final List<ExperienceModel> _experienceData = [
     ExperienceModel(
-      compnayName: 'Brain Station 23',
-      position: 'Software Engineer - I',
+      compnayName: 'Brain Station 23 PLC',
+      position: 'Software Engineer I',
       type: 'Full-time',
       time: 'Jul 2025 - Present',
       description:
-          '• Developing and maintaining enterprise-level applications for both Android and iOS platforms.\n'
-          '• Delivering robust and scalable solutions following clean architecture principles.\n'
-          '• Collaborating with cross-functional teams to publish and manage apps on the Google Play Store and Apple App Store.\n'
-          '• Participating in code reviews and mentoring team members on best practices.',
+          '• Built scalable data layers using REST (Dio + Retrofit) and GraphQL (graphql_flutter), integrating Shopify Storefront API alongside a custom backend.\n'
+          '• Applied Riverpod across 20+ feature domains following clean architecture — repositories, use cases, and domain entities.\n'
+          '• Integrated Firebase Cloud Messaging (FCM) for push notifications across foreground, background, and terminated states, including deep linking.\n'
+          '• Configured multi-environment setups (dev, UAT, production) with separate Firebase projects and Shorebird for OTA updates.\n'
+          '• Integrated rich media: video playback, YouTube embedding, and 3D product model rendering.\n'
+          '• Managed Android & iOS app releases — build configuration, signing, and deployment to Play Store and App Store.',
       skills:
-          'Flutter / Dart / Clean Architecture / App Store Deployment / Play Store Deployment / Git / Team Collaboration',
+          'Flutter / Dart / Riverpod / Clean Architecture / REST / GraphQL / Firebase / FCM / Shorebird / iOS & Android Deployment',
       location: 'Dhaka, Bangladesh',
     ),
     ExperienceModel(
-      compnayName: 'Geeky Solutions',
-      position: 'Apprenticeship',
-      type: 'Learnathon 3.0 (Sponsored by BrainStation23)',
-      time: 'Jan 2025 - Apr 2025',
+      compnayName: 'Ostad (EdTech Platform)',
+      position: 'Instructor',
+      type: 'Part-time · Remote',
+      time: 'Feb 2026 - Present',
       description:
-          '• Participated in an intensive 3-month training program focused on industry-level software development practices.\n'
-          '• Explored and implemented state management solutions including BLoC architecture.\n'
-          '• Developed collaborative team projects, gaining experience in agile workflows and sprint planning.\n'
-          '• Acquired knowledge in UI/UX principles, Git version control, and RESTful API integration.',
+          '• Mentoring students through a live "App Development with Flutter & AI" course.\n'
+          '• Guiding learners from fundamentals to production-level Flutter development with real-world AI integration.\n'
+          '• Supporting student growth through structured lessons, hands-on practice, and live feedback sessions.',
       skills:
-          'BLoC / Agile / Git / REST API / Project Management / Cross-platform Development / CI-CD',
-      location: 'Dhaka, Bangladesh',
+          'Flutter / Dart / Pedagogy / Curriculum Design / AI Integration / Mentorship / Live Instruction',
+      location: 'Remote',
     ),
     ExperienceModel(
       compnayName: 'EDU Computer Club',
       position: 'Sub-Executive',
       type: 'Club Role',
-      time: 'Oct 2025 - Present',
+      time: 'Oct 2022 - Present',
       description:
           '• Leading initiatives and coordinating technical sessions to enhance student learning.\n'
-          '• Spearheaded programming contests and hands-on workshops on web and app development.\n'
-          '• Fostered a collaborative environment among members and mentored junior participants.',
+          '• Organized programming contests, hackathons, and hands-on workshops on app and web development.\n'
+          '• Fostered a collaborative environment, mentoring junior participants in competitive programming.',
       skills:
-          'Leadership / Competitive Programming / Event Organization / Team Management / Public Speaking / Mentorship',
+          'Leadership / Competitive Programming / Event Organization / Team Management / Mentorship',
       location: 'Chattogram, Bangladesh',
     ),
     ExperienceModel(
-      compnayName: 'Maverick Softwares™',
-      position: 'Software Developer Intern',
-      type: 'Internship',
-      time: 'Jan 2024 - Jun 2024',
+      compnayName: 'Maverick Softwares',
+      position: 'Software Developer',
+      type: 'Hybrid',
+      time: 'Jan 2024 - Dec 2024',
       description:
-          '• Worked in a hybrid environment on a Human Resource Management System using Flutter.\n'
-          '• Implemented features using Riverpod and Provider for effective state management.\n'
-          '• Collaborated with designers and backend teams to ensure smooth UI/API integration.\n'
-          '• Performed bug fixing, feature optimization, and UI polishing for multiple app modules.',
+          '• Developed and maintained mobile applications using Flutter in a hybrid team environment.\n'
+          '• Contributed to an HR Management System with feature development and bug fixes.\n'
+          '• Improved app performance through optimization and efficient state management (Riverpod, Provider).\n'
+          '• Collaborated with designers and backend teams to ensure smooth UI/API integration.',
       skills:
-          'Flutter / Riverpod / Provider / REST API / Mobile App Development / UI Polishing / Git / Team Collaboration',
-      location: 'Chattogram, Bangladesh',
+          'Flutter / Dart / Riverpod / Provider / REST API / Mobile App Development / Git / Team Collaboration',
+      location: 'Hybrid',
     ),
   ];
 

@@ -80,6 +80,14 @@ class _AboutState extends State<About> {
                                       color: WebColors.primary,
                                     ),
                                   ),
+                                  TextSpan(
+                                    text: "\nSoftware Engineer",
+                                    style: GoogleFonts.urbanist(
+                                      fontSize: 14.sp,
+                                      fontWeight: FontWeight.w400,
+                                      color: WebColors.gray400,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -92,7 +100,7 @@ class _AboutState extends State<About> {
                                   height: 1.5,
                                 ),
                                 children: [
-                                  const TextSpan(text: "Over the past "),
+                                  const TextSpan(text: "Building scalable applications for "),
                                   TextSpan(
                                     text: "2+ years",
                                     style: const TextStyle(
@@ -101,26 +109,37 @@ class _AboutState extends State<About> {
                                     ),
                                   ),
                                   const TextSpan(
-                                    text: ", I've been working as a ",
+                                    text: " — across the full lifecycle from design and ",
                                   ),
                                   TextSpan(
-                                    text: "Software Developer",
+                                    text: "API integration",
                                     style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: WebColors.white,
                                     ),
                                   ),
                                   const TextSpan(
-                                    text:
-                                        ", specializing in building modern cross-platform and native mobile apps using ",
+                                    text: " to testing and production. Specialized in ",
                                   ),
                                   TextSpan(
-                                    text:
-                                        "Flutter, Kotlin, Jetpack Compose, Firebase, Supabase, Nodejs, Sql",
+                                    text: "Flutter, clean architecture, REST & GraphQL",
                                     style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: WebColors.white,
                                     ),
+                                  ),
+                                  const TextSpan(
+                                    text: ". Also solved ",
+                                  ),
+                                  TextSpan(
+                                    text: "400+ DSA problems",
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: WebColors.white,
+                                    ),
+                                  ),
+                                  const TextSpan(
+                                    text: " on LeetCode & Codeforces.",
                                   ),
                                 ],
                               ),

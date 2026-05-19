@@ -22,7 +22,14 @@ class AppRouter {
         path: '/education',
         builder: (context, state) => const EducationView(),
       ),
-      GoRoute(path: '/story', builder: (context, state) => const StoryView()),
+      GoRoute(
+        path: '/achievements',
+        builder: (context, state) => const StoryView(),
+      ),
+      GoRoute(
+        path: '/story',
+        redirect: (_, __) => '/achievements',
+      ),
     ],
   );
 }

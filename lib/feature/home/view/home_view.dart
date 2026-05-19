@@ -5,6 +5,7 @@ import 'package:mishads_codefolio/feature/home/view/widget/about.dart';
 import 'package:mishads_codefolio/feature/home/view/widget/about_technologies.dart';
 import 'package:mishads_codefolio/feature/home/view/widget/my_expertise_view.dart';
 import 'package:mishads_codefolio/feature/home/view/widget/stack_slider.dart';
+import 'package:mishads_codefolio/feature/home/view/widget/stats_view.dart';
 import 'package:mishads_codefolio/feature/home/view/widget/web_bar.dart';
 import 'package:mishads_codefolio/feature/home/view_model/home_view_model.dart';
 import 'package:provider/provider.dart';
@@ -53,6 +54,7 @@ class _HomeViewState extends State<HomeView>
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     animatedAbout(model),
+                    const StatsView(),
                     stackSlider(model),
                     SizedBox(height: 10.h),
                     MyExpertiseView(),

@@ -88,12 +88,12 @@ class _WebBarState extends State<WebBar> {
                     : WebColors.primary,
               ),
               barTextButton(
-                "Story",
+                "Achievements",
                 () {
-                  model.setSelectedTab("Story");
-                  context.go('/story');
+                  model.setSelectedTab("Achievements");
+                  context.go('/achievements');
                 },
-                model.selectedTab == "Story"
+                model.selectedTab == "Achievements"
                     ? WebColors.white
                     : WebColors.primary,
               ),
@@ -105,7 +105,7 @@ class _WebBarState extends State<WebBar> {
                 model.openUrl(WebSocialLinks.linkedinLink);
               }),
               barIconButton(WebIcons.mail, () {
-                model.openUrl('mailto:sakifrahman.dev@gmail.com');
+                model.openUrl('mailto:sakifmishad.dev@gmail.com');
               }),
             ],
           ),
